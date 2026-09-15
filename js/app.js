@@ -14,6 +14,9 @@ const botonAbrir =
 const nombreInvitado =
     document.getElementById("nombreInvitado");
 
+const textoCupos =
+    document.getElementById("textoCupos");
+
 const musica =
     document.getElementById("musicaFondo");
 
@@ -26,6 +29,8 @@ const botonWhatsapp =
 
 let abierta = false;
 let observer;
+
+let cantidadInvitados = 1;
 
 
 /* =========================================================
@@ -53,18 +58,20 @@ function cargarInvitado() {
             invitados[codigo];
 
 
-        if (
-            typeof invitado === "string"
-        ) {
+        nombreInvitado.textContent =
+            invitado.nombre ||
+            "Invitado especial";
 
-            nombreInvitado.textContent =
-                invitado;
 
-        } else {
+        cantidadInvitados =
+            invitado.cantidad || 1;
 
-            nombreInvitado.textContent =
-                invitado.nombre ||
-                "Invitado especial";
+
+        if (textoCupos) {
+
+            textoCupos.textContent =
+                "No. Invitados: " +
+                cantidadInvitados;
 
         }
 
@@ -72,6 +79,17 @@ function cargarInvitado() {
 
         nombreInvitado.textContent =
             "Invitado especial";
+
+
+        cantidadInvitados = 1;
+
+
+        if (textoCupos) {
+
+            textoCupos.textContent =
+                "No. Invitados: 1";
+
+        }
 
     }
 }
@@ -443,19 +461,13 @@ function configurarWhatsapp() {
 `Hola, confirmo mi asistencia a los XV de Ana Sofía Mondragón Valencia.
 
 Invitación para: ${invitado}
+No. Invitados: ${cantidadInvitados}
 
 Fecha: 24 de octubre de 2026
 Hora: 7:00 p. m.
 
 ¡Muchas gracias!`;
 
-
-    /*
-       NÚMERO DE WHATSAPP ACTUAL.
-
-       Si necesitas cambiarlo posteriormente,
-       reemplaza solamente este número.
-    */
 
     const numero =
         "573025438454";

@@ -293,7 +293,7 @@ body {
     max-width: 680px;
 
     margin:
-        0 auto 45px;
+        0 auto 15px;
 
     font-family:
         "Allura",
@@ -315,8 +315,48 @@ body {
 }
 
 
+/* =========================================================
+   NÚMERO DE INVITADOS
+========================================================= */
+
 .texto-cupos {
-    display: none;
+
+    display: inline-block;
+
+    margin:
+        0 auto 32px;
+
+    padding:
+        9px 22px;
+
+    border:
+        1px solid rgba(32,78,117,.35);
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.55);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #173f63;
+
+    text-shadow:
+        0 0 8px white;
+
+    box-shadow:
+        0 8px 25px rgba(20,59,92,.10);
+
+    backdrop-filter:
+        blur(6px);
 }
 
 
@@ -2023,7 +2063,7 @@ body {
 
 
 /* =========================================================
-   MÚSICA
+   MÚSICA - PLAYLIST
 ========================================================= */
 
 .notas-fondo {
@@ -2766,7 +2806,21 @@ body {
         font-size:
             clamp(3.5rem, 17vw, 5rem);
 
-        margin-bottom: 38px;
+        margin-bottom: 12px;
+    }
+
+
+    .texto-cupos {
+
+        margin:
+            0 auto 28px;
+
+        padding:
+            8px 18px;
+
+        font-size: .92rem;
+
+        letter-spacing: 1.5px;
     }
 
 
