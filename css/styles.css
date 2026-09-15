@@ -8,7 +8,6 @@
     --azul-oscuro: #183b64;
     --azul-medio: #4e82b4;
     --azul-cielo: #9fd4f4;
-
     --plata: #dce8f3;
     --blanco: #ffffff;
 
@@ -61,6 +60,7 @@ body {
     z-index: 5000;
 
     width: 100%;
+    height: 100vh;
     height: 100svh;
 
     overflow: hidden;
@@ -93,7 +93,7 @@ body {
 
 
 /* =========================================================
-   PORTADA EN DOS MITADES
+   PUERTAS
 ========================================================= */
 
 .puerta {
@@ -471,7 +471,6 @@ body {
 
 .portada.abriendo
 .luz-interior {
-
     opacity: 1;
 }
 
@@ -595,13 +594,14 @@ body {
 
 
 /* =========================================================
-   TODAS LAS ESCENAS
+   SECCIONES
 ========================================================= */
 
 .seccion {
 
     position: relative;
 
+    min-height: 100vh;
     min-height: 100svh;
 
     display: flex;
@@ -646,13 +646,11 @@ body {
 
 
 /* =========================================================
-   CIELO 1 - PRESENTACIÓN
+   FONDOS POR SECCIÓN
 ========================================================= */
 
 .presentacion {
-
-    background-position:
-        center 15%;
+    background-position: center 15%;
 }
 
 
@@ -668,14 +666,8 @@ body {
 }
 
 
-/* =========================================================
-   CIELO 2 - MENSAJE
-========================================================= */
-
 .mensaje {
-
-    background-position:
-        center 35%;
+    background-position: center 35%;
 }
 
 
@@ -694,14 +686,8 @@ body {
 }
 
 
-/* =========================================================
-   CIELO 3 - CONTADOR
-========================================================= */
-
 .seccion-contador {
-
-    background-position:
-        center 55%;
+    background-position: center 55%;
 }
 
 
@@ -716,14 +702,8 @@ body {
 }
 
 
-/* =========================================================
-   CIELO 4 - FIESTA
-========================================================= */
-
 .detalles {
-
-    background-position:
-        center 70%;
+    background-position: center 70%;
 }
 
 
@@ -742,14 +722,8 @@ body {
 }
 
 
-/* =========================================================
-   CIELO 5 - DRESS CODE
-========================================================= */
-
 .dress-code {
-
-    background-position:
-        center 85%;
+    background-position: center 85%;
 }
 
 
@@ -765,14 +739,8 @@ body {
 }
 
 
-/* =========================================================
-   CIELO 6 - LLUVIA SOBRES
-========================================================= */
-
 .lluvia-sobres {
-
-    background-position:
-        center 40%;
+    background-position: center 40%;
 }
 
 
@@ -792,14 +760,8 @@ body {
 }
 
 
-/* =========================================================
-   CIELO 7 - MÚSICA
-========================================================= */
-
 .musica-seccion {
-
-    background-position:
-        center 65%;
+    background-position: center 65%;
 }
 
 
@@ -815,14 +777,8 @@ body {
 }
 
 
-/* =========================================================
-   CIELO 8 - CONFIRMACIÓN
-========================================================= */
-
 .confirmacion {
-
-    background-position:
-        center 25%;
+    background-position: center 25%;
 }
 
 
@@ -841,14 +797,8 @@ body {
 }
 
 
-/* =========================================================
-   CIELO 9 - DESPEDIDA
-========================================================= */
-
 .despedida {
-
-    background-position:
-        center top;
+    background-position: center top;
 }
 
 
@@ -864,7 +814,7 @@ body {
 
 
 /* =========================================================
-   ELEMENTOS DECORATIVOS
+   DECORACIÓN
 ========================================================= */
 
 .estrellas-flotantes,
@@ -891,7 +841,8 @@ body {
     opacity: .32;
 
     animation:
-        estrellas 3s ease-in-out infinite alternate;
+        estrellas 3s ease-in-out
+        infinite alternate;
 }
 
 
@@ -965,7 +916,7 @@ body {
 
 
 /* =========================================================
-   PRESENTACIÓN
+   CONTENEDORES
 ========================================================= */
 
 .contenido-presentacion,
@@ -987,6 +938,38 @@ body {
 }
 
 
+.contenido-mensaje {
+
+    width:
+        min(100%, 700px);
+}
+
+
+.contenido-contador {
+
+    width:
+        min(100%, 750px);
+}
+
+
+.contenido-detalles {
+
+    width:
+        min(100%, 650px);
+}
+
+
+.contenido-despedida {
+
+    width:
+        min(100%, 650px);
+}
+
+
+/* =========================================================
+   PRESENTACIÓN
+========================================================= */
+
 .mis-xv {
 
     font-family:
@@ -1003,10 +986,6 @@ body {
         var(--azul-profundo);
 }
 
-
-/* =========================================================
-   ANA SOFÍA - A MAYÚSCULA
-========================================================= */
 
 .ana-sofia {
 
@@ -1250,7 +1229,8 @@ body {
     font-size: 1.4rem;
 
     animation:
-        bajar 1.5s ease-in-out infinite;
+        bajar 1.5s ease-in-out
+        infinite;
 }
 
 
@@ -1266,13 +1246,6 @@ body {
 /* =========================================================
    MENSAJE
 ========================================================= */
-
-.contenido-mensaje {
-
-    width:
-        min(100%, 700px);
-}
-
 
 .titulo-pequeno {
 
@@ -1447,13 +1420,6 @@ body {
    CONTADOR
 ========================================================= */
 
-.contenido-contador {
-
-    width:
-        min(100%, 750px);
-}
-
-
 .contador-frase {
 
     font-family:
@@ -1572,15 +1538,8 @@ body {
 
 
 /* =========================================================
-   DETALLES
+   TÍTULOS
 ========================================================= */
-
-.contenido-detalles {
-
-    width:
-        min(100%, 650px);
-}
-
 
 .titulo-seccion {
 
@@ -1912,7 +1871,8 @@ body {
     position: relative;
 
     animation:
-        flotarSobre 3s ease-in-out infinite;
+        flotarSobre 3s ease-in-out
+        infinite;
 }
 
 
@@ -1945,8 +1905,7 @@ body {
     border:
         2px solid rgba(40,88,126,.65);
 
-    border-radius:
-        8px;
+    border-radius: 8px;
 
     background:
         linear-gradient(
@@ -2076,6 +2035,8 @@ body {
     z-index: 0;
 
     pointer-events: none;
+
+    overflow: hidden;
 }
 
 
@@ -2088,39 +2049,41 @@ body {
         serif;
 
     color:
-        rgba(255,255,255,.42);
+        rgba(255,255,255,.55);
 
     font-size: 5rem;
 
+    text-shadow:
+        0 0 20px rgba(255,255,255,.8);
+
     animation:
-        flotarNota 5s ease-in-out infinite;
+        flotarNota 5s ease-in-out
+        infinite;
 }
 
 
 .notas-fondo span:nth-child(1) {
 
-    left: 10%;
-    top: 20%;
+    left: 8%;
+    top: 18%;
 }
 
 
 .notas-fondo span:nth-child(2) {
 
-    right: 12%;
-    top: 35%;
+    right: 10%;
+    top: 34%;
 
-    animation-delay:
-        1s;
+    animation-delay: 1s;
 }
 
 
 .notas-fondo span:nth-child(3) {
 
-    left: 20%;
-    bottom: 15%;
+    left: 18%;
+    bottom: 12%;
 
-    animation-delay:
-        2s;
+    animation-delay: 2s;
 }
 
 
@@ -2128,32 +2091,359 @@ body {
 
     0%,
     100% {
+
         transform:
             translateY(0)
             rotate(-5deg);
+
+        opacity: .35;
     }
 
     50% {
+
         transform:
             translateY(-25px)
             rotate(8deg);
+
+        opacity: .75;
     }
 }
 
 
-.spotify-nota {
+/* =========================================================
+   TARJETA MÚSICA
+========================================================= */
 
-    margin-top: 18px;
+.tarjeta-musica {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding:
+        50px 35px 40px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.72),
+            rgba(185,225,248,.48)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.92);
+
+    box-shadow:
+        inset 0 0 40px rgba(255,255,255,.42),
+        0 25px 65px rgba(16,40,61,.20);
+}
+
+
+.tarjeta-musica::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    left: 50%;
+    top: -130px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.75),
+            transparent 68%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   DISCO MUSICAL
+========================================================= */
+
+.disco-musical {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 115px;
+    height: 115px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin:
+        0 auto 28px;
+
+    border-radius: 50%;
+
+    background:
+        repeating-radial-gradient(
+            circle,
+            #173b59 0px,
+            #173b59 5px,
+            #244f70 6px,
+            #244f70 8px
+        );
+
+    border:
+        4px solid rgba(255,255,255,.80);
+
+    box-shadow:
+        0 15px 35px rgba(16,40,61,.25),
+        0 0 25px rgba(255,255,255,.65);
+
+    animation:
+        girarDisco 12s linear
+        infinite;
+}
+
+
+.disco-musical::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 13px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255,255,255,.20);
+}
+
+
+.disco-centro {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #b9ddf3
+        );
+
+    color:
+        var(--azul-profundo);
+
+    font-size: 1.4rem;
+
+    box-shadow:
+        0 0 18px rgba(255,255,255,.9);
+}
+
+
+@keyframes girarDisco {
+
+    from {
+        transform:
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   TEXTO MÚSICA
+========================================================= */
+
+.pregunta-musica {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 390px;
+
+    margin:
+        0 auto 10px !important;
+
+    font-family:
+        "Cormorant Garamond",
+        serif !important;
+
+    font-size:
+        clamp(1.8rem, 5vw, 2.3rem) !important;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    color:
+        var(--azul-profundo);
+}
+
+
+.texto-musica {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 390px;
+
+    margin:
+        13px auto;
 
     font-family:
         "Cormorant Garamond",
         serif;
 
-    font-size: .95rem;
+    font-size: 1.25rem;
 
-    font-style: italic;
+    font-weight: 600;
 
-    opacity: .72;
+    line-height: 1.55;
+
+    color:
+        var(--azul-profundo);
+}
+
+
+/* =========================================================
+   BOTÓN SPOTIFY
+========================================================= */
+
+.boton-spotify {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    width:
+        min(100%, 390px);
+
+    min-height: 62px;
+
+    margin:
+        32px auto 0;
+
+    padding:
+        15px 20px;
+
+    gap: 10px;
+
+    border:
+        1px solid rgba(255,255,255,.75);
+
+    background:
+        var(--azul-profundo);
+
+    color:
+        var(--blanco);
+
+    line-height: 1.35;
+
+    box-shadow:
+        0 15px 35px rgba(16,40,61,.25),
+        inset 0 0 15px rgba(255,255,255,.05);
+}
+
+
+.boton-spotify:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.02);
+
+    background:
+        #1d5077;
+
+    box-shadow:
+        0 20px 40px rgba(16,40,61,.30);
+}
+
+
+.spotify-icono {
+
+    flex-shrink: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.15);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 1.3rem;
+}
+
+
+.playlist-nombre {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 27px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: .9rem;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color:
+        var(--azul-profundo);
+}
+
+
+.playlist-nombre span {
+
+    margin:
+        0 8px;
+
+    font-size: .65rem;
+
+    color:
+        var(--azul-medio);
 }
 
 
@@ -2193,13 +2483,6 @@ body {
 /* =========================================================
    DESPEDIDA
 ========================================================= */
-
-.contenido-despedida {
-
-    width:
-        min(100%, 650px);
-}
-
 
 .te-esperamos {
 
@@ -2631,6 +2914,54 @@ body {
     }
 
 
+    .tarjeta-musica {
+
+        padding:
+            42px 20px 35px;
+    }
+
+
+    .disco-musical {
+
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .disco-centro {
+
+        width: 43px;
+        height: 43px;
+    }
+
+
+    .texto-musica {
+
+        font-size: 1.15rem;
+    }
+
+
+    .boton-spotify {
+
+        width: 100%;
+
+        min-height: 62px;
+
+        padding:
+            14px 15px;
+
+        font-size: .62rem;
+
+        letter-spacing: 2px;
+    }
+
+
+    .notas-fondo span {
+
+        font-size: 3.5rem;
+    }
+
+
     .control-musica {
 
         right: 15px;
@@ -2643,7 +2974,7 @@ body {
 
 
 /* =========================================================
-   REDUCIR MOVIMIENTO
+   ACCESIBILIDAD
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -2658,5 +2989,24 @@ body {
 
         animation-iteration-count:
             1 !important;
+
+        transition-duration:
+            .01ms !important;
+    }
+
+
+    .revelar,
+    .revelar.zoom,
+    .revelar.izquierda,
+    .revelar.derecha,
+    .revelar.arriba {
+
+        opacity: 1 !important;
+
+        transform:
+            none !important;
+
+        filter:
+            none !important;
     }
 }

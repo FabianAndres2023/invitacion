@@ -97,7 +97,7 @@ function abrirInvitacion() {
 
 
     /* =====================================================
-       MÚSICA
+       INICIAR MÚSICA
     ===================================================== */
 
     if (musica) {
@@ -184,7 +184,7 @@ if (botonAbrir) {
 
 
 /* =========================================================
-   CONTROL MÚSICA
+   CONTROL DE MÚSICA
 ========================================================= */
 
 if (
@@ -222,6 +222,7 @@ if (
                 );
 
             }
+
         }
     );
 }
@@ -450,12 +451,10 @@ Hora: 7:00 p. m.
 
 
     /*
-       IMPORTANTE:
-       Este es el número que actualmente
-       está configurado.
+       NÚMERO DE WHATSAPP ACTUAL.
 
-       Si necesitas cambiarlo,
-       solo reemplaza este número.
+       Si necesitas cambiarlo posteriormente,
+       reemplaza solamente este número.
     */
 
     const numero =
