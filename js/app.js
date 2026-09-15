@@ -70,7 +70,7 @@ function cargarInvitado() {
         if (textoCupos) {
 
             textoCupos.textContent =
-                "No. Invitados: " +
+                "Invitados: " +
                 cantidadInvitados;
 
         }
@@ -87,7 +87,7 @@ function cargarInvitado() {
         if (textoCupos) {
 
             textoCupos.textContent =
-                "No. Invitados: 1";
+                "Invitados: 1";
 
         }
 
@@ -461,7 +461,7 @@ function configurarWhatsapp() {
 `Hola, confirmo mi asistencia a los XV de Ana Sofía Mondragón Valencia.
 
 Invitación para: ${invitado}
-No. Invitados: ${cantidadInvitados}
+Invitados: ${cantidadInvitados}
 
 Fecha: 24 de octubre de 2026
 Hora: 7:00 p. m.
