@@ -37,7 +37,7 @@ const invitados = {
     },
 
     "003": {
-        nombre: "Familia Mondragón Valencia",
+        nombre: "Familia Mondragón Valencia Girón",
         cantidad: 4
     },
 
