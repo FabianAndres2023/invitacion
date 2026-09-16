@@ -1823,14 +1823,21 @@ body {
 }
 
 
+/* AZUL CIELO RESERVADO PARA LA QUINCEAÑERA */
+
 .circulo-azul {
 
     background:
         linear-gradient(
             145deg,
-            #183b64,
-            #73b5e3
+            #d9f1ff,
+            var(--azul-cielo),
+            #7fc4ee
         );
+
+    box-shadow:
+        0 8px 25px rgba(16,40,61,.20),
+        0 0 18px rgba(159,212,244,.55);
 }
 
 

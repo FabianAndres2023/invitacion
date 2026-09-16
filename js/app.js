@@ -30,6 +30,9 @@ const botonWhatsapp =
 let abierta = false;
 let observer;
 
+/*
+   null = invitación sin número de cupos visible
+*/
 let cantidadInvitados = 1;
 
 
@@ -63,19 +66,59 @@ function cargarInvitado() {
             "Invitado especial";
 
 
+        /*
+           IMPORTANTE:
+
+           No usamos:
+           invitado.cantidad || 1
+
+           porque las invitaciones que tengan
+           cantidad: null
+           NO deben mostrar número de invitados.
+        */
+
         cantidadInvitados =
-            invitado.cantidad || 1;
+            invitado.cantidad;
 
 
         if (textoCupos) {
 
-            textoCupos.textContent =
-                "Invitados: " +
-                cantidadInvitados;
+            if (
+                cantidadInvitados === null ||
+                cantidadInvitados === undefined
+            ) {
+
+                /*
+                   Invitación de formalidad:
+                   ocultamos completamente el texto de cupos.
+                */
+
+                textoCupos.textContent = "";
+                textoCupos.style.display = "none";
+
+            } else {
+
+                /*
+                   Invitación normal:
+                   mostramos la cantidad correspondiente.
+                */
+
+                textoCupos.style.display = "";
+
+                textoCupos.textContent =
+                    "Invitados: " +
+                    cantidadInvitados;
+
+            }
 
         }
 
     } else {
+
+        /*
+           Si alguien entra sin código
+           o con un código que no existe.
+        */
 
         nombreInvitado.textContent =
             "Invitado especial";
@@ -85,6 +128,8 @@ function cargarInvitado() {
 
 
         if (textoCupos) {
+
+            textoCupos.style.display = "";
 
             textoCupos.textContent =
                 "Invitados: 1";
@@ -457,11 +502,27 @@ function configurarWhatsapp() {
             : "Invitado";
 
 
+    /*
+       Si cantidadInvitados es null,
+       no agregamos la línea "Invitados".
+    */
+
+    let informacionInvitados = "";
+
+    if (
+        cantidadInvitados !== null &&
+        cantidadInvitados !== undefined
+    ) {
+
+        informacionInvitados =
+            `\nInvitados: ${cantidadInvitados}`;
+    }
+
+
     const mensaje =
 `Hola, confirmo mi asistencia a los XV de Ana Sofía Mondragón Valencia.
 
-Invitación para: ${invitado}
-Invitados: ${cantidadInvitados}
+Invitación para: ${invitado}${informacionInvitados}
 
 Fecha: 24 de octubre de 2026
 Hora: 7:00 p. m.
