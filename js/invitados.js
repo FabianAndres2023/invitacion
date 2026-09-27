@@ -359,6 +359,26 @@ const invitados = {
     "065": {
         nombre: "María Alejandra",
         cantidad: 1
+    },
+
+    "066": {
+        nombre: "Salomé Pérez",
+        cantidad: 1
+    },
+
+    "067": {
+        nombre: "Valentina Sierra",
+        cantidad: 1
+    },
+
+    "068": {
+        nombre: "Geronimo Fernandez",
+        cantidad: 1
+    },
+
+    "069": {
+        nombre: "Sharyk",
+        cantidad: 1
     }
 
 };
